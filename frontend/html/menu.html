@@ -28,16 +28,46 @@
 			.btn {
 				background-color: rgb(93, 64, 55);
 			}
+			#secondaryNavbar {
+				transition: all 0.3s ease;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+			#secondaryNavbar .navbar-brand {
+				padding: 8px 16px;
+			}
+			#secondaryNavbar .nav-link {
+				padding: 8px 16px;
+			}
+			#secondaryNavbar.sticky {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 1000;
+				left: 0;
+				right: 0;
+			}
+			.navbar-padding {
+				padding-top: 40px;
+			}
+			#secondaryNavbar .container-fluid {
+				padding: 0;
+			}
+			.secondary-nav-wrapper {
+				background-color: rgb(93, 64, 55);
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		
 		</style>
-		<title>Test</title>
+		<title>Menüm</title>
 	</head>
 	<body data-bs-spy="scroll" data-bs-target=".navbar-menu">
-		<nav
-			id="topNavbar"
-			class="navbar navbar-expand-md navbar-dark justify-content-end fixed-top"
-		>
+		<nav id="topNavbar" class="navbar navbar-expand-md navbar-dark">
 			<div class="container">
-				<a href="#" class="navbar-brand">LOGO</a>
+				<a href="index.html" class="navbar-brand">LOGO</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -74,14 +104,13 @@
 			</div>
 		</nav>
 
-		<div class="container">
+		<div class="secondary-nav-wrapper">
 			<nav
 				id="secondaryNavbar"
-				class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"
-				style="margin-top: 50px"
+				class="navbar navbar-expand-sm bg-dark navbar-dark"
 			>
-				<div class="container">
-					<a href="#" class="navbar-brand">Menü</a>
+				<div class="container-fluid">
+					<a href="#" class="navbar-brand"> Menü</a>
 					<button
 						class="navbar-toggler ms-auto"
 						type="button"
@@ -122,7 +151,7 @@
 		<div
 			id="sıcak"
 			class="bg-success"
-			style="padding-top: 130px; padding-bottom: 60px"
+			style="padding-top: 25px; padding-bottom: 60px"
 		>
 			<div class="container">
 				<h2 style="padding-bottom: 50px">Sıcak İçecekler</h2>
@@ -519,16 +548,18 @@
 			crossorigin="anonymous"
 		></script>
 		<script>
-			const topNavbar = document.getElementById("topNavbar");
-			const secondaryNavbar = document.getElementById("secondaryNavbar");
+			window.addEventListener("scroll", function () {
+				const secondaryNavbar =
+					document.getElementById("secondaryNavbar");
+				const topNavbar = document.getElementById("topNavbar");
+				const topNavbarHeight = topNavbar.offsetHeight;
 
-			const observer = new ResizeObserver(() => {
-				const topNavbarHeight =
-					topNavbar.getBoundingClientRect().height;
-				secondaryNavbar.style.marginTop = `${topNavbarHeight}px`;
+				if (window.scrollY >= topNavbarHeight) {
+					secondaryNavbar.classList.add("sticky");
+				} else {
+					secondaryNavbar.classList.remove("sticky");
+				}
 			});
-
-			observer.observe(topNavbar);
 		</script>
 	</body>
 </html>
