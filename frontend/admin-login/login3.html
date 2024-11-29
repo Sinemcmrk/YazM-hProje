@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Ekranı</title>
+  <link rel="stylesheet" href="login3.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">Logo</div>
+    <div class="navbar-links">
+      <!-- Bu kısım belki silinir belki gerekli navbar elemanları eklenir -->
+      <button>.</button>
+      <button>.</button>
+      <button>.</button>
+    </div>
+    <div class="user-settings">
+      <span>Profil Icon</span>
+      <div class="dropdown">
+        <a href="#">Ayarlar</a>
+        <a href="#">Çıkış Yap</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <form id="login-form">
+      <h2>Kafe Adı</h2>
+      <p>Hesap bilgilerinizi girin</p>
+       <!-- Bu kısımda BackEnd de RegEx'lerle uğraşmak istemiyorsanız kullanıcı adı olarak güncelleyebilirsiniz -->
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>All rights reserved.</p>
+  </footer>
+</body>
+</html>
