@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<style>
+			main {
+				background-color: white;
+			}
+
+			nav,
+			footer {
+				background-color: rgb(93, 64, 55);
+			}
+
+			body {
+				background-color: #f4f4f9;
+			}
+
+			.container-main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				margin: 20px auto;
+				max-width: 1200px;
+			}
+
+			.form-container {
+				width: 100%;
+				max-width: 600px;
+				background-color: #ffffff;
+				border-radius: 16px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				padding: 20px;
+			}
+
+			.button-container {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+
+			.button-container a {
+				width: 250px;
+				height: 60px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 16px;
+				font-size: 18px;
+				color: white;
+				text-decoration: none;
+			}
+
+			.btn-danger {
+				background-color: #e4405f;
+			}
+
+			@media (max-width: 768px) {
+				.container-main {
+					padding: 10px;
+				}
+			}
+		</style>
+		<title>Kafe Otomasyonu</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark justify-content-end">
+			<div class="container">
+				<a href="#" class="navbar-brand">LOGO</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#mobile"
+					aria-controls="mobile"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="mobile" class="collapse navbar-collapse">
+					<ul class="navbar-nav ms-auto nav-tabs">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">Anasayfa</a>
+						</li>
+						<li class="nav-item">
+							<a href="menu.html" class="nav-link">Menü</a>
+						</li>
+						<li class="nav-item">
+							<a href="contacts.html" class="nav-link active bg-dark">İletişim</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main>
+			<div class="container container-main">
+				<!-- İletişim Formu -->
+				<div class="form-container">
+					<h2 class="text-center mb-4">İletişim Formu</h2>
+					<form class="needs-validation" novalidate>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="isim" class="form-label">Ad</label>
+								<input type="text" class="form-control" id="isim" name="isim" required />
+								<div class="invalid-feedback">Lütfen isminizi giriniz.</div>
+							</div>
+							<div class="col-md-6">
+								<label for="soyad" class="form-label">Soyad</label>
+								<input type="text" class="form-control" id="soyad" name="soyad" required />
+								<div class="invalid-feedback">Lütfen soyadınızı giriniz.</div>
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="emailUser" class="form-label">E-posta</label>
+							<input type="email" class="form-control" id="emailUser" name="emailUser" placeholder="example@example.com" required />
+							<div class="invalid-feedback">Lütfen geçerli bir e-posta adresi giriniz.</div>
+						</div>
+						<div class="mb-3">
+							<label for="tur" class="form-label">İletişim Türü</label>
+							<select class="form-select" id="tur" name="tur" required>
+								<option value="" disabled selected>Bir tür seçiniz</option>
+								<option value="İstek">İstek</option>
+								<option value="Öneri">Öneri</option>
+								<option value="Şikayet">Şikayet</option>
+							</select>
+							<div class="invalid-feedback">Lütfen bir tür seçiniz.</div>
+						</div>
+						<div class="mb-3">
+							<label for="aciklama" class="form-label">Açıklama</label>
+							<textarea class="form-control" id="aciklama" name="aciklama" rows="4" required></textarea>
+							<div class="invalid-feedback">Lütfen açıklama giriniz.</div>
+						</div>
+						<button type="submit" class="btn btn-primary w-100">Gönder</button>
+					</form>
+				</div>
+
+				<!-- Müşteri Memnuniyet Anketi -->
+				<div class="form-container mt-5">
+					<h2 class="text-center mb-4">Müşteri Memnuniyet Anketi</h2>
+					<form class="needs-validation" novalidate>
+						<div class="mb-3">
+							<label class="form-label">Hizmetimizi nasıl değerlendirirsiniz?</label>
+							<div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="hizmetCokIyi" name="hizmetDegerlendirme" value="Çok İyi" required>
+									<label class="form-check-label" for="hizmetCokIyi">Çok İyi</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="hizmetIyi" name="hizmetDegerlendirme" value="İyi" required>
+									<label class="form-check-label" for="hizmetIyi">İyi</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="hizmetOrta" name="hizmetDegerlendirme" value="Orta" required>
+									<label class="form-check-label" for="hizmetOrta">Orta</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="hizmetKotu" name="hizmetDegerlendirme" value="Kötü" required>
+									<label class="form-check-label" for="hizmetKotu">Kötü</label>
+								</div>
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="puan" class="form-label">Genel memnuniyet puanınız (1-10):</label>
+							<input type="range" class="form-range" id="puan" name="puan" min="1" max="10" required>
+						</div>
+						<div class="mb-3">
+							<label for="yorum" class="form-label">Eklemek istediğiniz bir yorum var mı?</label>
+							<textarea class="form-control" id="yorum" name="yorum" rows="3"></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary w-100">Anketi Gönder</button>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="text-center text-white py-3">
+			&copy; 2024 Kafe Otomasyonu
+		</footer>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-qJDUPZqWnR3zd03hRk9UyN8tyQHNCNwST2fDdqLlGAJn/keJlbLi3ZHixuP1ftPd"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
