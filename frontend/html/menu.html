@@ -1,565 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous"
-		/>
-		<style>
-			main {
-				background-color: white;
-			}
-			header {
-				background-color: rgb(251, 235, 216);
-			}
-			nav {
-				background-color: rgb(93, 64, 55);
-			}
-			footer {
-				background-color: rgb(93, 64, 55);
-			}
-			.border {
-				background-color: #a2d5c6;
-			}
-			.btn {
-				background-color: rgb(93, 64, 55);
-			}
-			#secondaryNavbar {
-				transition: all 0.3s ease;
-				padding: 0;
-				margin: 0;
-				width: 100%;
-			}
-			#secondaryNavbar .navbar-brand {
-				padding: 8px 16px;
-			}
-			#secondaryNavbar .nav-link {
-				padding: 8px 16px;
-			}
-			#secondaryNavbar.sticky {
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 1000;
-				left: 0;
-				right: 0;
-			}
-			.navbar-padding {
-				padding-top: 40px;
-			}
-			#secondaryNavbar .container-fluid {
-				padding: 0;
-			}
-			.secondary-nav-wrapper {
-				background-color: rgb(93, 64, 55);
-				width: 100%;
-				margin: 0;
-				padding: 0;
-			}
-		
-		</style>
-		<title>Menüm</title>
-	</head>
-	<body data-bs-spy="scroll" data-bs-target=".navbar-menu">
-		<nav id="topNavbar" class="navbar navbar-expand-md navbar-dark">
-			<div class="container">
-				<a href="index.html" class="navbar-brand">LOGO</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#mobile"
-					aria-controls="mobile"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div id="mobile" class="collapse navbar-collapse">
-					<ul class="navbar-nav ms-auto nav-tabs">
-						<li class="nav-item">
-							<a
-								href="index.html"
-								class="nav-link"
-								aria-current="page"
-								>Anasayfa</a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="menu.html" class="nav-link active bg-dark"
-								>Menü</a
-							>
-						</li>
-						<li class="nav-item">
-							<a href="contacts.html" class="nav-link"
-								>İletişim</a
-							>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menü</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #5D4037;
+      --secondary-color: #8D6E63;
+      --accent-color: #FBEBE8;
+      --text-color: #2D2D2D;
+    }
 
-		<div class="secondary-nav-wrapper">
-			<nav
-				id="secondaryNavbar"
-				class="navbar navbar-expand-sm bg-dark navbar-dark"
-			>
-				<div class="container-fluid">
-					<a href="#" class="navbar-brand"> Menü</a>
-					<button
-						class="navbar-toggler ms-auto"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarNav"
-						aria-controls="navbarNav"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav mx-auto">
-							<li class="nav-item">
-								<a href="#sıcak" class="nav-link"
-									>Sıcak İçecekler</a
-								>
-							</li>
-							<li class="nav-item">
-								<a href="#soguk" class="nav-link"
-									>Soğuk İçecekler</a
-								>
-							</li>
-							<li class="nav-item">
-								<a href="#yemek" class="nav-link">Yemekler</a>
-							</li>
-							<li class="nav-item">
-								<a href="#atıstırmalık" class="nav-link"
-									>Atıştırmalık</a
-								>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: var(--text-color);
+      background-color: #f8f9fa;
+    }
 
-		<div
-			id="sıcak"
-			class="bg-success"
-			style="padding-top: 25px; padding-bottom: 60px"
-		>
-			<div class="container">
-				<h2 style="padding-bottom: 50px">Sıcak İçecekler</h2>
+    .navbar {
+      background-color: var(--primary-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-				<div class="row">
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 1</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 2</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 3</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .category-nav {
+      background-color: var(--secondary-color);
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 4</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .category-nav .nav-link {
+      color: white;
+      padding: 0.5rem 1.5rem;
+      transition: all 0.3s ease;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 5</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    .category-nav .nav-link:hover {
+      background-color: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
 
-		<div
-			id="soguk"
-			class="bg-primary"
-			style="padding-top: 20px; padding-bottom: 90px"
-		>
-			<div class="container">
-				<h2 style="padding-bottom: 50px">Soğuk İçecekler</h2>
-				<div class="row">
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 1</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 2</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-category {
+      margin-bottom: 3rem;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 3</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .category-title {
+      color: var(--primary-color);
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--accent-color);
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 4</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 5</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    .menu-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
 
-		<div
-			id="yemek"
-			class="bg-secondary"
-			style="padding-top: 20px; padding-bottom: 90px"
-		>
-			<div class="container">
-				<h2 style="padding-bottom: 50px">Yemekler</h2>
-				<div class="row">
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 1</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 2</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 3</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-item-content {
+      padding: 1.25rem;
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 4</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-item-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 5</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    .menu-item-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
 
-		<div
-			id="atıstırmalık"
-			class="bg-warning"
-			style="padding-top: 20px; padding-bottom: 90px"
-		>
-			<div class="container">
-				<h2 style="padding-bottom: 50px">Atıştırmalıklar</h2>
-				<div class="row">
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 1</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    .menu-item-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 2</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ana Navbar -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">LOGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="mobile" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link active">Menü</a>
+          </li>
+          <li class="nav-item">
+            <a href="contacts.html" class="nav-link">İletişim</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 3</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+  <!-- Kategori Navbar -->
+  <nav class="category-nav">
+    <div class="container">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a href="#sicak" class="nav-link">Sıcak İçecekler</a>
+        </li>
+        <li class="nav-item">
+          <a href="#soguk" class="nav-link">Soğuk İçecekler</a>
+        </li>
+        <li class="nav-item">
+          <a href="#yemek" class="nav-link">Yemekler</a>
+        </li>
+        <li class="nav-item">
+          <a href="#atistirmalik" class="nav-link">Atıştırmalıklar</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 4</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
+  <!-- Menü İçeriği -->
+  <div class="menu-container">
+    <div id="menu-content"></div>
+  </div>
 
-					<div class="col-lg-3 col-md-4 col-6 mb-4">
-						<div class="card" style="width: 100%">
-							<img
-								src="../images/test_img.jpg"
-								class="card-img-top"
-							/>
-							<div class="card-body">
-								<h5 class="card-title text-center">Ürün 5</h5>
-								<p class="card-text text-center">
-									Bu bir test açıklaması o yüzden sadece et'e
-									odaklan :D
-								</p>
-								<h5 class="text-center" id="fiyat">200₺</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+  <footer class="text-center">
+    <div class="container">
+      <span></span>
+    </div>
+  </footer>
 
-		<footer class="py-2 text-white">
-			<div class="container text-center">
-				<span>All Rights Reserved.</span>
-			</div>
-		</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      const menuContent = document.getElementById('menu-content');
+      
+      // Ürünleri kategorilere göre grupla
+      const categories = products.reduce((acc, product) => {
+        if (!acc[product.category]) {
+          acc[product.category] = [];
+        }
+        acc[product.category].push(product);
+        return acc;
+      }, {});
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			crossorigin="anonymous"
-		></script>
-		<script>
-			window.addEventListener("scroll", function () {
-				const secondaryNavbar =
-					document.getElementById("secondaryNavbar");
-				const topNavbar = document.getElementById("topNavbar");
-				const topNavbarHeight = topNavbar.offsetHeight;
+      // Her kategori için bölüm oluştur
+      Object.entries(categories).forEach(([category, items]) => {
+        const section = document.createElement('div');
+        section.className = 'menu-category';
+        section.id = category.toLowerCase().replace(/\s+/g, '');
+        
+        section.innerHTML = `
+          <h2 class="category-title">${category}</h2>
+          <div class="menu-grid">
+            ${items.map(item => `
+              <div class="menu-item">
+                ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
+                <div class="menu-item-content">
+                  <h3 class="menu-item-title">${item.name}</h3>
+                  <p class="menu-item-description">${item.description || ''}</p>
+                  <div class="menu-item-price">${item.price} ₺</div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        
+        menuContent.appendChild(section);
+      });
 
-				if (window.scrollY >= topNavbarHeight) {
-					secondaryNavbar.classList.add("sticky");
-				} else {
-					secondaryNavbar.classList.remove("sticky");
-				}
-			});
-		</script>
-	</body>
+      if (products.length === 0) {
+        menuContent.innerHTML = `
+          <div class="text-center py-5">
+            <h2>Henüz ürün eklenmemiş.</h2>
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
 </html>
