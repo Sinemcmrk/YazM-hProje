@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yönetici Paneli</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="masa.css">
+  <link rel="stylesheet" href="add-menu-item-form.css">
+</head>
+<body>
+  <!-- Üst Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">Logo</div>
+    <div class="navbar-links">
+      <button class="top-nav-btn" data-panel="masa">Masa</button>
+      <button class="top-nav-btn" data-panel="calisan">Çalışan</button>
+      <button class="top-nav-btn" data-panel="rapor">Rapor</button>
+    </div>
+    <div class="user-settings">
+      <span>Profil Icon</span>
+      <div class="dropdown">
+        <a href="#">Ayarlar</a>
+        <a href="#">Çıkış Yap</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ana Panel -->
+  <div class="main-panel">
+    <!-- Sol Dikey Navbar -->
+    <aside class="sidebar">
+      <!-- İçerik dinamik olarak burada değişecek -->
+      <ul id="sidebar-menu"></ul>
+    </aside>
+
+    <!-- Sağdaki Dinamik İçerik Alanı -->
+    <section class="content-board">
+    </section>
+  </div>
+
+  
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>All rights reserved.</p>
+  </footer>
+
+  <script src="products.js"></script>
+</body>
+</html>

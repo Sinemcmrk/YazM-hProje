@@ -1,0 +1,79 @@
+/* Masa Kartları */
+.table-card {
+  display: inline-block;
+  background: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-card h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.table-card button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.table-card button:hover {
+  background: #c0392b;
+}
+
+/* Masa Ekleme Formu */
+.add-table-form {
+  position: fixed;  
+  top: 75px;        
+  right: 20px;      
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  background: #ecf0f1;
+  width: 250px;     
+}
+
+.add-table-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.add-table-form input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+
+.add-table-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #16a085;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-table-form button:hover {
+  background: #138d75;
+}
