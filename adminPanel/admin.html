@@ -23,9 +23,12 @@
     <nav class="navbar">
       <div class="navbar-logo">Logo</div>
       <div class="navbar-links">
-        <button class="top-nav-btn" data-panel="masa">Masa</button>
-        <button class="top-nav-btn" data-panel="calisan">Çalışan</button>
-        <button class="top-nav-btn" data-panel="rapor">Rapor</button>
+        <button onclick="window.location.href='SiparisListesi.html'">
+          Sipariş Listesi
+        </button>
+        <button onclick="toggleMasaEkle()">Masa Ekle</button>
+
+        <button onclick="window.location.href='Rapor.html'">Rapor</button>
       </div>
 
       <!-- Dropdown Menü -->
@@ -37,7 +40,6 @@
           <a onclick="logout()">Çıkış</a>
         </div>
       </div>
-
     </nav>
 
     <!-- Ana Panel -->

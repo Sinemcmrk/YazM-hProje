@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sipariş Ekle</title>
+    <style>
+      /* Genel Stil */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+      }
+
+      .navbar {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .main-content {
+        margin-left: 20px;
+        padding: 20px;
+      }
+
+      .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      .form-container h2 {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .form-group button {
+        padding: 10px 15px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .form-group button:hover {
+        background-color: #2980b9;
+      }
+
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Üst Navbar -->
+    <div class="navbar">
+      <div>Logo</div>
+      <div>
+        <button onclick="window.location.href='siparisListele.html'">
+          Sipariş Listesi
+        </button>
+        <button onclick="window.location.href='MasaEkle.html'">
+          Masa Ekle
+        </button>
+        <button>Çalışan</button>
+        <button>Rapor</button>
+      </div>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="main-content">
+      <h1>Sipariş Ekle</h1>
+      <p>Yeni bir sipariş eklemek için aşağıdaki formu doldurun.</p>
+
+      <!-- Sipariş Ekleme Formu -->
+      <div class="form-container">
+        <h2>Sipariş Formu</h2>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="tableNumber">Masa Numarası:</label>
+            <input type="number" id="tableNumber" name="tableNumber" required />
+          </div>
+          <div class="form-group">
+            <label for="orderDetails">Sipariş Detayları:</label>
+            <input type="text" id="orderDetails" name="orderDetails" required />
+          </div>
+          <div class="form-group">
+            <label for="orderStatus">Sipariş Durumu:</label>
+            <select id="orderStatus" name="orderStatus" required>
+              <option value="Hazırlanıyor">Hazırlanıyor</option>
+              <option value="Servis Ediliyor">Servis Ediliyor</option>
+              <option value="Tamamlandı">Tamamlandı</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Sipariş Ekle</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">All rights reserved.</div>
+
+    <!-- JavaScript -->
+    <script src="siparisEkle.js"></script>
+  </body>
+</html>
