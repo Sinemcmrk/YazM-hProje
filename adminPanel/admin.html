@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yönetici Paneli</title>
-    <link rel="stylesheet" href="admin.css" />
-    <link rel="stylesheet" href="masa.css" />
-    <link rel="stylesheet" href="add-menu-item-form.css" />
-    <script>
-      // Sayfa yüklendiğinde çalışacak
-      window.onload = function () {
-        // Kullanıcının giriş yapıp yapmadığını kontrol et
-        if (localStorage.getItem("isLoggedIn") !== "true") {
-          // Giriş yapmamışsa giriş sayfasına yönlendir
-          window.location.href = "login.html";
-        }
-      };
-    </script>
-  </head>
-  <body>
-    <!-- Üst Navbar -->
-    <nav class="navbar">
-      <div class="navbar-logo">Logo</div>
-      <div class="navbar-links">
-        <button onclick="window.location.href='SiparisListesi.html'">
-          Sipariş Listesi
-        </button>
-        <button onclick="toggleMasaEkle()">Masa Ekle</button>
-
-        <button onclick="window.location.href='Rapor.html'">Rapor</button>
-      </div>
-
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yönetici Paneli</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="masa.css" />
+  <link rel="stylesheet" href="add-menu-item-form.css" />
+  <script>
+    // Sayfa yüklendiğinde çalışacak
+    window.onload = function () {
+      // Kullanıcının giriş yapıp yapmadığını kontrol et
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        // Giriş yapmamışsa giriş sayfasına yönlendir
+        window.location.href = "admin.html";
+      }
+    };
+  </script>
+</head>
+<body>
+  <!-- Üst Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">Logo</div>
+    <div class="navbar-links">
+      <button class="top-nav-btn" data-panel="masa">Masa</button>
+      <button class="top-nav-btn" data-panel="calisan">Çalışan</button>
+      <button class="top-nav-btn" data-panel="rapor">Rapor</button>
       <!-- Dropdown Menü -->
       <div class="dropdown">
         <button class="dropbtn">Ayarlar</button>
@@ -40,26 +34,25 @@
           <a onclick="logout()">Çıkış</a>
         </div>
       </div>
-    </nav>
-
-    <!-- Ana Panel -->
-    <div class="main-panel">
-      <!-- Sol Dikey Navbar -->
-      <aside class="sidebar">
-        <!-- İçerik dinamik olarak burada değişecek -->
-        <ul id="sidebar-menu"></ul>
-      </aside>
-
-      <!-- Sağdaki Dinamik İçerik Alanı -->
-      <section class="content-board"></section>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>All rights reserved.</p>
-    </footer>
+  <!-- Ana Panel -->
+  <div class="main-panel">
+    <!-- Sol Dikey Navbar -->
+    <aside class="sidebar">
+      <!-- İçerik dinamik olarak burada değişecek -->
+      <ul id="sidebar-menu"></ul>
+    </aside>
 
-    <script src="products.js"></script>
-    <script src="logout.js"></script>
-  </body>
+    <!-- Sağdaki Dinamik İçerik Alanı -->
+    <section class="content-board"></section>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>All rights reserved.</p>
+  </footer>
+  <script src="products.js"></script>
+  <script src="logout.js"></script>
+</body>
 </html>
