@@ -32,6 +32,6 @@ async function login(event) {
     localStorage.setItem("isLoggedIn", true);
     window.location.href = "/adminPanel/admin.html";
   } else {
-    alert("Invalid username or password");
+    alert("Kullanıcı adı veya şifre hatalı");
   }
 }

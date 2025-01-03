@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Giriş Yap</title>
     <link rel="stylesheet" href="styles.css" />
     <script>
       if (localStorage.getItem("isLoggedIn")) {
@@ -13,17 +13,17 @@
   </head>
   <body>
     <div class="container">
-      <h2>Login</h2>
+      <h2>Giriş Yap</h2>
       <form id="loginForm" onsubmit="login(event)">
-        <label for="username">Username:</label>
+        <label for="username">Kullanıcı Adı:</label>
         <input type="text" id="username" name="username" required />
 
-        <label for="password">Password:</label>
+        <label for="password">Şİfre:</label>
         <input type="password" id="password" name="password" required />
 
-        <button type="submit">Login</button>
+        <button type="submit">Giriş Yap</button>
       </form>
-      <p>Don't have an account? <a href="signup.html">Signup here</a></p>
+      <p>Hesabınız yok mu?<a href="signup.html">Kayıt Ol</a></p>
     </div>
     <script src="login.js"></script>
   </body>

@@ -2,18 +2,45 @@
 const panelData = {
   masa: [
     { name: "Masaları Düzenle", content: "Buradan masa düzeni yapılabilecek" },
-    { name: "Aktif Siparişler", content: "Burayı aklıma bir şey gelmedi diye ekledim daha güzel bir menü eklenebilir ya da direk silinebilir." },
-    { name: "Menüyü Düzenle", content: "Menü güncelleme bölümü buradan yapılabilecek" },
+    {
+      name: "Aktif Siparişler",
+      content:
+        "Burayı aklıma bir şey gelmedi diye ekledim daha güzel bir menü eklenebilir ya da direk silinebilir.",
+    },
+    {
+      name: "Menüyü Düzenle",
+      content: "Menü güncelleme bölümü buradan yapılabilecek",
+    },
   ],
   calisan: [
-    { name: "Personel Yönetimi", content: "Personel rolleri buradan belirlenecek ve işe alım iştn çıkarım buradan yapılacak. Gerekirse personel şifresi burada oluşturulacak." },
-    { name: "Maaş Hesabı", content: "Personellerin maaş hesabı buradan yapılabilecek. Çok gerekli değil ama geliştirilmesi kolay ve hoca karşısında içerik olur." },
-    { name: "Vardiya Yönetimi", content: "Kafenin çift vardiya çalışma durumu için. Yine gerekli değil ama kolay eklenebilir içerik." },
+    {
+      name: "Personel Yönetimi",
+      content:
+        "Personel rolleri buradan belirlenecek ve işe alım iştn çıkarım buradan yapılacak. Gerekirse personel şifresi burada oluşturulacak.",
+    },
+    {
+      name: "Maaş Hesabı",
+      content: "Personellerin maaş hesabı buradan yapılabilecek.",
+    },
+    {
+      name: "Vardiya Yönetimi",
+      content:
+        "Kafenin çift vardiya çalışma durumu için. Yine gerekli değil ama kolay eklenebilir içerik.",
+    },
   ],
   rapor: [
-    { name: "Günlük Raporlar", content: "Bu kısım zamanı gelince geliştirilecek" },
-    { name: "Aylık Raporlar", content: "Bu kısım zamanı gelince geliştirilecek." },
-    { name: "Gelir/Gider Analizi", content: "Bu kısım zamanı gelince geliştirilecek" },
+    {
+      name: "Günlük Raporlar",
+      content: "Bu kısım zamanı gelince geliştirilecek",
+    },
+    {
+      name: "Aylık Raporlar",
+      content: "Bu kısım zamanı gelince geliştirilecek.",
+    },
+    {
+      name: "Gelir/Gider Analizi",
+      content: "Bu kısım zamanı gelince geliştirilecek",
+    },
   ],
 };
 
@@ -33,7 +60,9 @@ function updateSidebar(panel) {
     // Sidebar butonuna tıklama olayı
     li.addEventListener("click", () => {
       // Seçili durumu güncelle
-      document.querySelectorAll(".sidebar li").forEach(el => el.classList.remove("active"));
+      document
+        .querySelectorAll(".sidebar li")
+        .forEach((el) => el.classList.remove("active"));
       li.classList.add("active");
 
       // İçerik tahtasını güncelle
@@ -50,14 +79,16 @@ function updateSidebar(panel) {
 }
 
 // Üst navbar butonlarına tıklama
-document.querySelectorAll(".top-nav-btn").forEach(btn => {
+document.querySelectorAll(".top-nav-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     // Tıklanan butona göre sidebar güncelle
     const panel = btn.dataset.panel;
     updateSidebar(panel);
 
     // Üst navbar'da seçili durumu göstermek için
-    document.querySelectorAll(".top-nav-btn").forEach(el => el.classList.remove("active"));
+    document
+      .querySelectorAll(".top-nav-btn")
+      .forEach((el) => el.classList.remove("active"));
     btn.classList.add("active");
   });
 });
@@ -100,7 +131,6 @@ function renderTables() {
     tableContainer.appendChild(tableCard);
   });
 
- 
   addTableBtn.addEventListener("click", () => {
     const tableNumber = document.getElementById("table-number").value;
     const tableCapacity = document.getElementById("table-capacity").value;
@@ -114,7 +144,7 @@ function renderTables() {
     }
   });
 
- // Masa silme
+  // Masa silme
   tableContainer.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
       const index = e.target.dataset.index;
@@ -124,17 +154,13 @@ function renderTables() {
   });
 }
 
-
- 
 // Sol menüde "Masaları Düzenle" tıklanırsa çalışacak
 function handleTableEdit() {
   renderTables();
 }
 
-
-
 // Üst ve sol navbar işleyişini ayarlarken handleTableEdit'i bağla
-document.querySelectorAll(".top-nav-btn").forEach(btn => {
+document.querySelectorAll(".top-nav-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const panel = btn.dataset.panel;
     if (panel === "masa") {
@@ -150,9 +176,6 @@ document.getElementById("sidebar-menu").addEventListener("click", (e) => {
     handleTableEdit();
   }
 });
-
-
-
 
 // Menü Düzenleme Fonksiyonu
 function loadMenuManagement() {
@@ -216,7 +239,6 @@ function loadMenuManagement() {
   // İçeriği content-board'a yerleştir
   contentBoard.innerHTML = menuHTML;
 }
-
 
 // Sidebar'da Menüyü Düzenle'ye tıklandığında
 document.getElementById("sidebar-menu").addEventListener("click", (e) => {
