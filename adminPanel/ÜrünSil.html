@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eklenen Ürünler</title>
+  <link rel="stylesheet" href="add-menu-item-form.css">
+  <style>
+    .product-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .product-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .delete-button {
+      margin-left: auto;
+      padding: 5px 10px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-button:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ürün Listesi -->
+  <div class="product-list">
+    <h3>Eklenen Ürünleri Silme</h3>
+    <ul id="product-list"></ul>
+  </div>
+
+  <script>
+    // LocalStorage'dan ürünleri al ve listele
+    function loadProducts() {
+      const productList = document.getElementById('product-list');
+      productList.innerHTML = '';
+
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      products.forEach((product, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${product.name} - ${product.price}₺ - ${product.category}`;
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Sil';
+        deleteButton.className = 'delete-button';
+        deleteButton.onclick = () => deleteProduct(index);
+
+        li.appendChild(deleteButton);
+        productList.appendChild(li);
+      });
+    }
+
+    // Ürün sil
+    function deleteProduct(index) {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      products.splice(index, 1);
+      localStorage.setItem('products', JSON.stringify(products));
+      loadProducts();
+    }
+
+    // Sayfa yüklendiğinde ürünleri yükle
+    window.onload = loadProducts;
+  </script>
+</body>
+</html>
